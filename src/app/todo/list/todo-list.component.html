@@ -1,0 +1,10 @@
+<form novalidate [formGroup]="formGroup">
+  <ng-container
+    *ngFor="let item of items; trackBy: trackById; let index = index"
+    [formArrayName]="index"
+  >
+    <input type="checkbox" formControlName="done" />
+    <input type="text" formControlName="title" />
+    <input type="text" formControlName="description" />
+  </ng-container>
+</form>
